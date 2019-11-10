@@ -19,13 +19,13 @@ function makeDecimal(prop){
 timeline.add({
   targets: dataCotainer,
   Temperature: 3010,
-  pH: 809,
+  pH: 793,
   Salinity: 3710,
   easing: 'linear',
   round: 1,
   update: function() {
     temp.innerHTML = makeDecimal(dataCotainer.Temperature);
-    pH.innerHTML =makeDecimal( dataCotainer.pH);
+    pH.innerHTML = JSON.stringify(dataCotainer.pH).substr(0,1)+'.'+JSON.stringify(dataCotainer.pH).substr(1,3);
     salinity.innerHTML =makeDecimal(dataCotainer.Salinity);
   },
   duration: 10000,
@@ -33,7 +33,7 @@ timeline.add({
 timeline.add({
   targets: dataCotainer,
   Temperature: 3001,
-  pH: 809,
+  pH: 800,
   Salinity: 3700,
   easing: 'linear',
   round: 1,

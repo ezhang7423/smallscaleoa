@@ -11,7 +11,7 @@ if (searchParams.includes('fisher')) {
       }
     timeline.add({
         targets: dataCotainer,
-        Temperature: 187,
+        Temperature: 196,
         easing: 'linear',
         round: 1,
         update: function() {

@@ -70,8 +70,11 @@
       userInput = userInput.value;
       if (userInput.includes("fisher") || userInput.includes("Fish")) {
         window.location.href = "main.html?id=fisher"
-      } else {
+      } else if (userInput.includes("org")){
         window.location.href = "main.html?id=org"
+      }
+      else{
+        alert('Incorrect Username or Password')
       }
     });
   </script>

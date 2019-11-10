@@ -6,11 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Home</title>
+  <script src="fisherman/anime.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <style>
     .nodisplay {
       display: none;
+    }
+    .main-wrapper{
+      padding: 20px 20px;
+      
+    }
+    .paid{
+      font-size: 50px;
+      margin-left: 300px;
+    }
+    .pay-explanation{
+      margin: 0px 300px;
+    }
+    .paid-no{
+      color: red;
+    }
+    .yes.paid-no{
+      color: green;
     }
   </style>
 </head>
@@ -43,8 +61,15 @@
     </div>
   </nav>
   <h1 style="padding: 25px 25px" class="main"></h1>
+  <div class='main-wrapper'>
+    <div class = "paid">PAYOUT: <span class='paid-no'>YES</span></div>
+    <div class='paid metric'>CURRENT METRIC: 186</div>
+    <div class='pay-explanation'>Insurance group Willis Towers Watson agrees to payout a sum of 1401591550.72 IDR to the community of Cheeca contingent upon the metrics of pH, temperature, and salinity.
+      if the agreed to equation of these three variables goes over 200 units in Smart Contract 1.2.
+    </div>
+  </div>
+  <script src = "animateMain.js"></script>
   <script>
-    let searchParams = window.location.href
     function addNavButton(text) {
       text = document.createElement("a")
       text.innerText = text
@@ -57,10 +82,14 @@
     if (searchParams.includes('fisher')) {
       document.querySelector('.main').innerText = "Hello Angel!"
       document.querySelector('.input.nodisplay').classList.toggle('nodisplay')
+      document.querySelector('.paid-no').innerText = 'NO'
+
     }
-    else {
+    else if (searchParams.includes('org')) {
       document.querySelector('.main').innerText = "Welcome Willis Towers Watson"
-      document.querySelector('.map.nodisplay').classList.toggle('nodisplay')
+      document.querySelector('.paid-no').innerText = 'NO'
+      document.querySelector('.paid-no').classList.toggle('yes')
+      
     }
   </script>
 </body>

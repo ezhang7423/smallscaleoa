@@ -39,7 +39,7 @@ timeline.add({
   round: 1,
   update: function() {
     temp.innerHTML = makeDecimal(dataCotainer.Temperature);
-    pH.innerHTML =makeDecimal( dataCotainer.pH);
+    pH.innerHTML = makeDecimal(dataCotainer.pH);
     salinity.innerHTML =makeDecimal(dataCotainer.Salinity);
   },
   duration: 10000,

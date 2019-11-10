@@ -22,7 +22,7 @@ if (searchParams.includes('fisher')) {
         
       timeline.add({
         targets: dataCotainer,
-        Temperature: 195,
+        Temperature: 187,
         round: 1,
         update: function() {
           temp.innerHTML = "CURRENT: "+ dataCotainer.Temperature;

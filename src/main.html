@@ -87,6 +87,7 @@
     }
     else if (searchParams.includes('org')) {
       document.querySelector('.main').innerText = "Welcome Willis Towers Watson"
+      document.querySelector('.map.nodisplay').classList.toggle('nodisplay')
       document.querySelector('.paid-no').innerText = 'NO'
       document.querySelector('.paid-no').classList.toggle('yes')
       

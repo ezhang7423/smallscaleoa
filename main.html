@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Home</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <style>
@@ -29,13 +29,11 @@
           <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Get started</a>
+          <a class="nav-link map nodisplay" href="organization/map.html" tabindex="-1" aria-disabled="true">Map</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nodisplay" href="organization/map.html" tabindex="-1" aria-disabled="true">Map</a>
+          <a class="nav-link input nodisplay" href="fisherman/form.html" tabindex="-1" aria-disabled="true">Input
+            Data</a>
         </li>
       </ul>
 
@@ -45,15 +43,25 @@
       </form>
     </div>
   </nav>
-  <h1 class="main"></h1>
+  <h1 style="padding: 25px 25px" class="main"></h1>
   <script>
     let searchParams = window.location.href
+    function addNavButton(text) {
+      text = document.createElement("a")
+      text.innerText = text
+      text.setAttribute("sample", "sample2", "sample3")
+      textWrapper = document.createElement('li')
+      textWrapper.appendChild(text)
+      navbar = document.querySelector('.navbar-nav.mr-auto')
+      navbar.appendChild(textWrapper)
+    }
     if (searchParams.includes('fisher')) {
-      document.querySelector('.main').innerText = "fisher"
+      document.querySelector('.main').innerText = "Hello Angel!"
+      document.querySelector('.input.nodisplay').classList.toggle('nodisplay')
     }
     else {
-      document.querySelector('.main').innerText = "organization"
-      document.querySelector('.nodisplay').classList.toggle('nodisplay')
+      document.querySelector('.main').innerText = "Welcome Willis Towers Watson"
+      document.querySelector('.map.nodisplay').classList.toggle('nodisplay')
     }
   </script>
 </body>
